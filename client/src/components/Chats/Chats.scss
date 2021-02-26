@@ -1,0 +1,22 @@
+.chatList {
+  .chat,
+  .selectedChat {
+    background-color: whitesmoke;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+    padding: 10px;
+    p {
+      margin: 0;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .chat:last-of-type {
+    border-bottom: none;
+  }
+  .selectedChat {
+    background-color: skyblue;
+  }
+}

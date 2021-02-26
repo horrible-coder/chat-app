@@ -1,0 +1,41 @@
+$font-family: "Segoe UI", sans-serif;
+.ReactModal__Content {
+  width: 25vw;
+  height: fit-content;
+  max-height: 50vh;
+  h1 {
+    margin-bottom: 30px;
+  }
+  .contact {
+    padding: 20px;
+    background: whitesmoke;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    svg {
+      background-color: pink;
+      border-radius: 5px;
+      padding: 15px;
+    }
+
+    .contactInfo {
+      padding-left: 20px;
+      .contactName {
+        font-size: 1.1em;
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      .contactPhone {
+        font-size: 0.9em;
+        margin: 0;
+      }
+    }
+    border-bottom: 1px solid rgb(224, 224, 224);
+  }
+  .contact:last-of-type {
+    border-bottom: none;
+  }
+  .contact:hover {
+    background-color: paleturquoise;
+  }
+}
