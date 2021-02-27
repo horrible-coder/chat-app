@@ -6,6 +6,7 @@ import "./Dashboard.scss";
 
 function Dashboard() {
   const chats = useSelector((state) => state.chatList.chatList);
+
   return (
     <div className="dashboard">
       <Sidebar />

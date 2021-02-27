@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Contacts from "../Contacts/Contacts";
 import ContactModal from "../ContactModal/ContactModal";
 import ConversationModal from "../ConversationModal/ConversationModal";
 import "./Sidebar.scss";
 import Chats from "../Chats/Chats";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import socketIOClient from "socket.io-client";
+import { setSocket } from "../../redux/Socket/actions";
 
 function Sidebar() {
   const [chatOpen, setChatOpen] = useState(true);
@@ -12,6 +14,18 @@ function Sidebar() {
   const [contactModalOpen, setContactModalOpen] = useState(false);
 
   const phone = useSelector((state) => state.profile.phone);
+
+  const socketRef = useRef();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    socketRef.current = socketIOClient("http://localhost:5000", {
+      query: {
+        phone: phone,
+      },
+    });
+    dispatch(setSocket(socketRef));
+  }, [dispatch, phone]);
 
   return (
     <>

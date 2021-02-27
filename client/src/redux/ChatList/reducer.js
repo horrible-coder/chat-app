@@ -1,5 +1,5 @@
 import chatListTypes from "./types";
-import { addMessages, startChat } from "./utils";
+import { addSentMessages, addReceivedMessages, startChat } from "./utils";
 
 const INITIAL_STATE = {
   chatList: [],
@@ -18,13 +18,18 @@ const chatListReducer = (state = INITIAL_STATE, action) => {
         ...state,
         selectedChatIndex: action.payload,
       };
-    case chatListTypes.ADD_MESSAGES_TO_CONTACT:
+    case chatListTypes.ADD_SENT_MESSAGES_TO_CONTACT:
       return {
         ...state,
-        chatList: addMessages(
+        chatList: addSentMessages(state.chatList, action.phone, action.message),
+      };
+    case chatListTypes.ADD_RECEIVED_MESSAGES_TO_CONTACT:
+      return {
+        ...state,
+        chatList: addReceivedMessages(
           state.chatList,
-          state.selectedChatIndex,
-          action.payload
+          action.phone,
+          action.message
         ),
       };
     default:

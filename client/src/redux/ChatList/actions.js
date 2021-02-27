@@ -16,10 +16,20 @@ export const selectChat = (index) => {
   };
 };
 
-export const addChatMessageToContact = (message) => {
+export const addSentChatMessage = (receiver, messageSent) => {
   return {
-    type: chatListTypes.ADD_MESSAGES_TO_CONTACT,
-    info: "Action to add messages to contact",
-    payload: message,
+    type: chatListTypes.ADD_SENT_MESSAGES_TO_CONTACT,
+    info: "Action to add messages sent to contact",
+    phone: receiver,
+    message: messageSent,
+  };
+};
+
+export const addReceivedChatMessage = (sender, messageReceived) => {
+  return {
+    type: chatListTypes.ADD_RECEIVED_MESSAGES_TO_CONTACT,
+    info: "Action to add messages received from contact",
+    phone: sender,
+    message: messageReceived,
   };
 };
