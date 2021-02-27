@@ -22,9 +22,9 @@ function Chats() {
           key={index}
           onClick={() => dispatch(selectChat(index))}
         >
-          <p>{chat.phone}</p>
+          <p className="contactInfo">{chat.phone}</p>
 
-          <p>
+          <p className="contactMessage">
             {chat.messages.length > 0 &&
               (chat.messages[chat.messages.length - 1].receiver !== ""
                 ? "You: " + chat.messages[chat.messages.length - 1].text

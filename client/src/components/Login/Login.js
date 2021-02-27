@@ -18,7 +18,7 @@ function Login() {
         type="number"
         value={phone}
         onChange={handlePhoneChange}
-        placeholder="Enter Phone No."
+        placeholder="Phone"
       />
       <button
         onClick={() => dispatch(sendPhoneNumber(phone))}

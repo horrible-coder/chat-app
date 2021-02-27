@@ -1,4 +1,4 @@
-$font-family: "Noto Sans JP", sans-serif;
+$font-family: "Rubik", sans-serif;
 .chatScreen {
   width: 70%;
   display: flex;
@@ -22,18 +22,19 @@ $font-family: "Noto Sans JP", sans-serif;
   .chatsContainer {
     height: 69vh;
     padding: 3vh 4vh;
-    background-color: whitesmoke;
     overflow: auto;
     display: flex;
     flex-direction: column;
+    font-family: $font-family;
     .chatMessagesLeft {
-      background-color: white;
+      background-color: whitesmoke;
       width: fit-content;
       margin: 8px 0;
       overflow-wrap: break-word;
       max-width: 50%;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border-top-left-radius: 0;
     }
     .chatMessagesRight {
       align-self: flex-end;
@@ -43,16 +44,17 @@ $font-family: "Noto Sans JP", sans-serif;
       margin: 8px 0;
       overflow-wrap: break-word;
       max-width: 50%;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border-top-right-radius: 0;
     }
   }
   .sendMessage {
     display: flex;
-
     align-items: center;
-    background-color: rgb(0, 3, 44);
-    height: 15vh;
+    background-color: white;
+    border-top: 1px solid lightgrey;
+    height: calc(15vh - 1px);
     .sendMessageTextArea {
       width: 85%;
       margin: 10px 15px;
@@ -65,16 +67,20 @@ $font-family: "Noto Sans JP", sans-serif;
       resize: none;
     }
     .sendMessageButton {
-      background-color: rgb(228, 0, 38);
+      background-color: rgb(255, 36, 72);
       color: white;
-      width: 10%;
       font-size: 1em;
       justify-items: end;
       margin: 15px 15px 15px 5px;
-      padding: 15px 0;
+      padding: 15px 18px;
       border: none;
-      border-radius: 5px;
+      border-radius: 50px;
       font-family: $font-family;
+      cursor: pointer;
+      transition: 0.4s ease;
+    }
+    .sendMessageButton:hover {
+      background-color: rgb(255, 0, 43);
     }
   }
 }

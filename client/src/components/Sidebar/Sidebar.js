@@ -30,9 +30,9 @@ function Sidebar() {
   return (
     <>
       <div className="sidebar">
-        <div className="myProfile">
+        {/* <div className="myProfile">
           <p className="profilePhone">{phone}</p>
-        </div>
+        </div> */}
         <div className="sidebarTabs">
           <div
             className={chatOpen ? "chatsTabActive" : "chatsTab"}

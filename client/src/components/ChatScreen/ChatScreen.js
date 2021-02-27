@@ -5,7 +5,9 @@ import {
   addSentChatMessage,
   addReceivedChatMessage,
 } from "../../redux/ChatList/actions";
+import SendIcon from "@material-ui/icons/Send";
 import "./ChatScreen.scss";
+
 function ChatScreen() {
   const [chatMessage, setChatMessage] = useState("");
   const chats = useSelector((state) => state.chatList.chatList);
@@ -66,7 +68,7 @@ function ChatScreen() {
           className="sendMessageButton"
           onClick={handleSendChatMessage}
         >
-          Send
+          <SendIcon />
         </button>
       </div>
     </div>

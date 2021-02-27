@@ -1,24 +1,27 @@
 .contactList {
   .contact {
-    padding: 20px;
-    background: whitesmoke;
+    padding: 20px 30px;
+    background-color: whitesmoke;
     display: flex;
     cursor: pointer;
     svg {
-      background-color: rgb(255, 32, 69);
-      border-radius: 5px;
+      background-color: white;
+      color: skyblue;
+      border-radius: 50px;
       padding: 15px;
     }
     .contactInfo {
-      padding-left: 20px;
-      font-weight: 300;
+      padding-left: 30px;
+
       .contactName {
-        font-size: 1.1em;
+        font-size: 1.2em;
+        font-weight: 400;
         margin: 0;
         padding-bottom: 10px;
       }
       .contactPhone {
-        font-size: 0.9em;
+        font-size: 1em;
+        font-weight: 300;
         margin: 0;
       }
     }
