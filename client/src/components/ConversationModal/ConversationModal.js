@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "react-modal";
 import { useSelector, useDispatch } from "react-redux";
 import "./ConversationModal.scss";
-import PersonIcon from "@material-ui/icons/Person";
 import { startChat } from "../../redux/ChatList/actions";
 
 function ConversationModal({ show, onHide }) {
@@ -24,7 +23,9 @@ function ConversationModal({ show, onHide }) {
             key={index}
             onClick={() => handleSelectContact(contact.phone)}
           >
-            <PersonIcon />
+            <div className="contactImage">
+              <p>{contact.name[0]}</p>
+            </div>
             <div className="contactInfo">
               <p className="contactName">{contact.name}</p>
               <p className="contactPhone">{contact.phone}</p>
