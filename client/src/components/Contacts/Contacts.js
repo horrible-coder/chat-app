@@ -9,7 +9,7 @@ function Contacts() {
       {contacts.map((contact, index) => (
         <div className="contact" key={index}>
           <div className="contactImage">
-            <p>{contact.name[0]}</p>
+            <p>{contact.name[0].toUpperCase()}</p>
           </div>
           <div className="contactInfo">
             <p className="contactName">{contact.name}</p>

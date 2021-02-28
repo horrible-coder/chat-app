@@ -1,10 +1,11 @@
 import chatListTypes from "./types";
 
-export const startChat = (recipientPhone) => {
+export const startChat = (recipientPhone, recipientName) => {
   return {
     type: chatListTypes.START_CHAT,
     info: "Action to start a chat",
-    payload: recipientPhone,
+    phone: recipientPhone,
+    name: recipientName,
   };
 };
 
@@ -25,11 +26,11 @@ export const addSentChatMessage = (receiver, messageSent) => {
   };
 };
 
-export const addReceivedChatMessage = (sender, messageReceived) => {
+export const addReceivedChatMessage = (senderPhone, messageReceived) => {
   return {
     type: chatListTypes.ADD_RECEIVED_MESSAGES_TO_CONTACT,
     info: "Action to add messages received from contact",
-    phone: sender,
+    phone: senderPhone,
     message: messageReceived,
   };
 };

@@ -8,8 +8,8 @@ function ConversationModal({ show, onHide }) {
   const contacts = useSelector((state) => state.contactList.contactList);
   const dispatch = useDispatch();
 
-  const handleSelectContact = (phone) => {
-    dispatch(startChat(phone));
+  const handleSelectContact = (phone, name) => {
+    dispatch(startChat(phone, name));
     onHide();
   };
 
@@ -21,10 +21,10 @@ function ConversationModal({ show, onHide }) {
           <div
             className="contact"
             key={index}
-            onClick={() => handleSelectContact(contact.phone)}
+            onClick={() => handleSelectContact(contact.phone, contact.name)}
           >
             <div className="contactImage">
-              <p>{contact.name[0]}</p>
+              <p>{contact.name[0].toUpperCase()}</p>
             </div>
             <div className="contactInfo">
               <p className="contactName">{contact.name}</p>

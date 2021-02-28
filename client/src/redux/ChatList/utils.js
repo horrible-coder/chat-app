@@ -1,10 +1,13 @@
-export const startChat = (chatList, recipientPhone) => {
+export const startChat = (chatList, recipientPhone, recipientName) => {
   const chatExists = chatList.find(
     (currentChat) => currentChat.phone === recipientPhone
   );
   if (chatExists) return chatList;
   else {
-    return [...chatList, { phone: recipientPhone, messages: [] }];
+    return [
+      ...chatList,
+      { name: recipientName, phone: recipientPhone, messages: [] },
+    ];
   }
 };
 

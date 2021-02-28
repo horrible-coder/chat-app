@@ -41,7 +41,11 @@ function ChatScreen() {
   return (
     <div className="chatScreen">
       <div className="chatHeader">
-        <h1>{chats[selectedChatIndex].phone}</h1>
+        <h1>
+          {chats[selectedChatIndex].name
+            ? chats[selectedChatIndex].name
+            : chats[selectedChatIndex].phone}
+        </h1>
       </div>
       <div className="chatsContainer">
         {chats[selectedChatIndex].messages.map((message, index) => (

@@ -11,7 +11,7 @@ const chatListReducer = (state = INITIAL_STATE, action) => {
     case chatListTypes.START_CHAT:
       return {
         ...state,
-        chatList: startChat(state.chatList, action.payload),
+        chatList: startChat(state.chatList, action.phone, action.name),
       };
     case chatListTypes.SELECT_CHAT:
       return {

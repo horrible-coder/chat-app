@@ -54,5 +54,8 @@ $h1-font-family: "Roboto", sans-serif;
       background-color: rgb(53, 0, 53);
       color: white;
     }
+    @media screen and (max-width: 900px) {
+      width: 40vw;
+    }
   }
 }

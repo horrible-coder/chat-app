@@ -17,7 +17,6 @@ io.on("connection", (socket) => {
   socket.join(socket.handshake.query.phone);
 
   socket.on("newChatMessage", (data) => {
-    console.log(data);
     socket.to(data.receiver).emit("receiveChatMessage", data);
   });
 });

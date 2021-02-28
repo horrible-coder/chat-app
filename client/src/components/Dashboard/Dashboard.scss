@@ -1,11 +1,22 @@
 .dashboard {
   display: flex;
+  align-items: center;
   .sidebar {
     width: 30%;
   }
   @media screen and (max-width: 1000px) {
     .sidebar {
       width: 40%;
+    }
+  }
+  .emptyScreen {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    p {
+      margin: 15px;
     }
   }
 }
