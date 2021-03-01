@@ -18,8 +18,10 @@ function Sidebar() {
   const socketRef = useRef();
   const dispatch = useDispatch();
 
+  const SERVER_URL = "https://just-chatt.herokuapp.com/";
+
   useEffect(() => {
-    socketRef.current = socketIOClient("http://localhost:5000", {
+    socketRef.current = socketIOClient(SERVER_URL, {
       query: {
         phone: phone,
       },
