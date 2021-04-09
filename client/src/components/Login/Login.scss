@@ -36,15 +36,10 @@ $font-family: "Rubik", sans-serif;
     margin: 25px;
     transition: 0.4s ease-in;
     cursor: pointer;
-    a {
-      text-decoration: none;
-      color: white;
-    }
+    color: white;
   }
   .continueButton:hover {
     background-color: rgb(53, 0, 53);
-    a {
-      color: white;
-    }
+    color: white;
   }
 }
