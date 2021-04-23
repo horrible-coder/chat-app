@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { sendPhoneNumber } from "../../redux/Profile/actions";
+import Logo from "../../assets/logo.svg";
 import "./Login.scss";
 
 function Login() {
@@ -31,15 +32,22 @@ function Login() {
 
   return (
     <div className="Login">
-      <input
-        type="number"
-        value={phone}
-        onChange={handlePhoneChange}
-        placeholder="Phone"
-      />
-      <button onClick={handleClick} className="continueButton">
-        Get Started
-      </button>
+      <div className="logo">
+        <img src={Logo} alt="Logo" />
+      </div>
+      <div className="loginContainer">
+        <h1 className="loginHeading">Login</h1>
+        <input type="text" placeholder="Name" />
+        <input
+          type="number"
+          value={phone}
+          onChange={handlePhoneChange}
+          placeholder="Phone"
+        />
+        <button onClick={handleClick} className="continueButton">
+          Get Started
+        </button>
+      </div>
     </div>
   );
 }
